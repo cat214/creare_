@@ -1,0 +1,234 @@
+html, body {
+    position: relative;
+}
+html {
+    font-size: 62.5%;
+    font-size: calc(100vw / 128);
+}
+body {
+    font-family: din-2014, yu-gothic-pr6n, sans-serif;
+    font-weight: 400;
+
+    background-color: #EDECE7;
+    color: #2E323B;
+}
+img {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+
+
+.header {
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    padding: 2vw 0;
+}
+.header-logo {
+    width: 15%;
+    padding: 0 1.5625vw;
+}
+.header-logo__wrapper {
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+}
+.gnav {
+    width: 85%;
+    display: flex;
+    align-items: center;
+
+    padding-left: 34vw;
+}
+
+.gnav__item {
+    font-size: 1.5rem;
+
+    padding-left: 4vw;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    position: relative;
+}
+.hero__inner-middle {
+    display: flex;
+    position: absolute;
+    top: 20%;
+}
+.hero-catchcopy__wrapper {
+    width: 50vw;
+}
+.hero-catchcopy {
+    font-size: 5rem;
+
+    position: absolute;
+    bottom: 1vh;
+}
+.hero-image__wrapper {
+    width: 95vh;
+}
+.hero__inner-bottom {
+    position: absolute;
+    bottom: 1vh;
+}
+.hero__scroll-text {
+    font-size: 2.5rem;
+    position: absolute;
+    bottom: 4vh;
+    right: 7vh;
+}
+.hero__scrollline {
+    /* 描画位置※位置は適宜調整してください */
+    position: absolute;
+    right: 2%;
+    bottom: 1%;
+    /* 全体の高さ */
+    height: 50px;
+}
+
+.hero__scrollline::after {
+    content: "";
+
+    /* 描画位置 */
+    position: absolute;
+    top: 0;
+
+    /* 線の形状 */
+    width: 2 px;
+    height: 30px;
+    background: #232323;
+
+    /* 線の動き1.4秒かけて動く。永遠にループ */
+    animation: pathmove 1.8s ease-in-out infinite;
+    opacity: 0;
+}
+ /* 線の描写 */
+
+/* 高さ・位置・透過が変化して線が上から下に動く */
+@keyframes pathmove {
+    0% {
+        height: 0;
+        top: 0;
+        opacity: 0;
+    }
+
+
+    30% {
+        height: 30px;
+        opacity: 1;
+    }
+
+    100% {
+        height: 0;
+        top: 50px;
+        opacity: 0;
+    }
+}
+
+
+.concept__inner {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    padding: 30vh;
+    padding-right: 0;
+}
+.concept__title {
+    font-size: 1.5rem;
+}
+.concept__catchcopy {
+    font-size: 4rem
+}
+.concept__bottom-text {
+    font-size: 1.5rem;
+    margin-top: 43vh;
+}
+
+.gallery__wrapper {
+    display: flex;
+}
+.gallery__title {
+    font-size: 3rem;
+    width: 70vw;
+    padding: 20vh;
+    text-align: center;
+}
+.gallery__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 2rem;
+    column-gap: 2rem;
+    margin-right: 0.5vw;
+}
+
+.menu__inner {
+    padding: 10vh;
+}
+.menu__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30vh;
+}
+.menu__title {
+    font-size: 3.5rem;
+    text-align: center;
+}
+.menu__table-title {
+    font-size: 2rem;
+}
+.menu__table-container {
+    width: 60%;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 2fr repeat(4, 1fr);
+    row-gap: 5rem;
+    font-size: 2rem;
+}
+.menu__table-price-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 1.5rem;
+}
+.menu__grid-cut {
+    grid-template-rows: repeat(3, 1fr);
+}
+.menu__grid-color {
+    grid-template-rows: repeat(5, 1fr);
+}
+.menu__grid-perm {
+    grid-template-rows: repeat(2, 1fr);
+}
+.menu__grid-straight {
+    grid-template-rows: repeat(3, 1fr);
+}
+.menu__grid-treatment {
+    grid-template-rows: repeat(3, 1fr);
+}
+.menu__grid-treatment {
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.information__inner {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    margin: 0 auto;
+    padding: 20vh 0;
+}
+.information__text {
+}
+.information__description {
+    margin-top: 30vh;
+}
+.information__map {
+    width: 75%;
+    text-align: right;
+}
+.information__title {
+    font-size: 3.5rem;
+}
