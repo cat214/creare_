@@ -4,6 +4,14 @@ html, body {
 html {
     font-size: 62.5%;
     font-size: calc(100vw / 128);
+    /* overflow: hidden; */
+
+    /* フォント再描画防止 */
+    visibility: hidden;
+}
+/* フォント再描画防止 */
+html.wf-active {
+    visibility: visible;
 }
 body {
     font-family: din-2014, yu-gothic-pr6n, sans-serif;
@@ -20,9 +28,24 @@ img {
 
 
 
-.header {
+#loading {
+    width: 100%;
+    height: 100vh;
     position: fixed;
     z-index: 100;
+    background-color: #EDECE7;
+}
+.loading__logo {
+    width: 10%;
+    height: 10%;
+    position: absolute;
+    top: 43%;
+    left: 44%;
+}
+
+.header {
+    position: fixed;
+    z-index: 1;
     display: flex;
     padding: 2vw 0;
 }
@@ -67,9 +90,25 @@ img {
 
     position: absolute;
     bottom: 1vh;
+    margin-left: 10vh;
 }
 .hero-image__wrapper {
     width: 95vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+/* .hero-image__reveal { */
+    /* width: 90%;
+    height: 90%;
+    overflow: hidden;
+    position: relative;
+} */
+.hero-image {
+    object-fit: cover;
 }
 .hero__inner-bottom {
     position: absolute;
@@ -129,7 +168,9 @@ img {
     }
 }
 
-
+.concept {
+    margin-top: 10vh;
+}
 .concept__inner {
     display: flex;
     justify-content: space-between;
@@ -145,6 +186,9 @@ img {
 .concept__bottom-text {
     font-size: 1.5rem;
     margin-top: 43vh;
+}
+.concept-image__wrapper {
+    overflow: hidden;
 }
 
 .gallery__wrapper {
@@ -227,6 +271,11 @@ img {
 .information__map {
     width: 75%;
     text-align: right;
+    background-color: #EDECE7;
+}
+.information__map iframe {
+    filter: grayscale(1);
+    opacity: 0.9;
 }
 .information__title {
     font-size: 3.5rem;

@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 
 
     <title>creare</title>
+
+    <link rel="stylesheet" href="https://use.typekit.net/cvm1cer.css">
     <link rel="stylesheet" href="css/destyle.css">
     <link rel="stylesheet" href="css/style.css">
 
-    <link rel="stylesheet" href="https://use.typekit.net/cvm1cer.css">
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
 
-    <!-- adobe fonts -->
-    <script>
+     <!-- adobe fonts -->
+     <script>
         (function(d) {
             var config = {
             kitId: 'jxw0xmu',
@@ -30,7 +31,9 @@
     </script>
 </head>
 <body>
-
+    <!-- <div id="loading">
+        <img class="loading__logo" src="./img/creare-american-logo.svg">
+    </div> -->
     <header class="header">
 
         <div class="header-logo">
@@ -59,7 +62,9 @@
                     <p class="hero-catchcopy">Create Beauty</p>
                 </div>
                 <div class="hero-image__wrapper">
-                    <img src="img/hero-image.jpeg" alt="hero-image">
+                    <!-- <div class="hero-image__reveal"> -->
+                        <img class="hero-image" src="img/hero-image.jpeg" alt="hero-image">
+                    <!-- </div> -->
                 </div>
             </div>
             <div class="hero__scrollline"></div>
@@ -78,8 +83,8 @@
                         <p>creareでは様々な要望へ<br>柔軟さを持って応えます</p>
                     </div>
                 </div>
-                <div class="concept__image">
-                    <img src="img/concept.jpeg" alt="concept">
+                <div class="concept-image__wrapper">
+                    <img class="concept-image" src="img/concept.jpeg" alt="concept">
                 </div>
             </div>
         </section>
@@ -210,5 +215,7 @@
     <footer>
         <img src="img/footer.png" alt="">
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
