@@ -1,10 +1,11 @@
+/* 全体 */
 html, body {
     position: relative;
 }
 html {
     font-size: 62.5%;
     font-size: calc(100vw / 128);
-    /* overflow: hidden; */
+    overflow: hidden;
 
     /* フォント再描画防止 */
     visibility: hidden;
@@ -24,6 +25,14 @@ img {
     width: 100%;
     height: auto;
     vertical-align: bottom;
+}
+
+
+/* JSクラス */
+.js-fade-in {
+    opacity : 0;
+    transform: translateY(20px);
+    transition: all 1s;
 }
 
 
